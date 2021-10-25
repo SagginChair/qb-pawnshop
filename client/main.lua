@@ -5,14 +5,14 @@ local sellHardwareItemsSet = false
 local sellHardwarePrice = 0
 
 Citizen.CreateThread(function()
-	local blip = AddBlipForCoord(Config.PawnLocation.x, Config.PawnLocation.y, Config.PawnLocation.z)
-	SetBlipSprite(blip, 431)
+	local blip = AddBlipForCoord(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z)
+	SetBlipSprite(blip, 66)
 	SetBlipDisplay(blip, 4)
-	SetBlipScale(blip, 0.7)
+	SetBlipScale(blip, 0.55)
 	SetBlipAsShortRange(blip, true)
-	SetBlipColour(blip, 5)
+	SetBlipColour(blip, 43)
 	BeginTextCommandSetBlipName("STRING")
-	AddTextComponentSubstringPlayerName("F.T. Pawn")
+	AddTextComponentSubstringPlayerName("")
 	EndTextCommandSetBlipName(blip)
 	while true do 
 		Citizen.Wait(1)
@@ -63,15 +63,15 @@ Citizen.CreateThread(function()
 		if #(pos - Config.PawnHardwareLocation) < 5.0 then
 			inRange = true
 			if #(pos - Config.PawnHardwareLocation) < 1.5 then
-				if GetClockHours() >= 9 and GetClockHours() <= 16 then
+				if GetClockHours() >= 0 and GetClockHours() <= 23 then
 					if not sellHardwareItemsSet then 
 						sellHardwarePrice = GetSellingHardwarePrice()
 						sellHardwareItemsSet = true
 					elseif sellHardwareItemsSet and sellHardwarePrice ~= 0 then
-						DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "~g~E~w~ - Sale iPhones/Samsung S10s/Tablets/Laptops ($"..sellHardwarePrice..")")
+						DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "~g~E~w~ - I'll buy any of your illegal shit ($"..sellHardwarePrice..")")
 						if IsControlJustReleased(0, 38) then
 							TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
-                            QBCore.Functions.Progressbar("sell_pawn_items", "Sell things", math.random(15000, 25000), false, true, {}, {}, {}, {}, function() -- Done
+                            QBCore.Functions.Progressbar("sell_pawn_items", "Sell things", math.random(5000, 15000), false, true, {}, {}, {}, {}, function() -- Done
                                 ClearPedTasks(PlayerPedId())
 								TriggerServerEvent("qb-pawnshop:server:sellHardwarePawnItems")
 								sellHardwareItemsSet = false
@@ -82,7 +82,7 @@ Citizen.CreateThread(function()
 							end)
 						end
 					else
-						DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "Pawnshop: You have nothing to sell")
+						DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "Fence: You have nothing to sell me")
 					end
 				else
 					DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "Pawnshop closed, open from ~r~9:00")
