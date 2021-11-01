@@ -1,21 +1,22 @@
 local ItemList = {
-    ["goldchain"] = math.random(60, 110),
-    ["diamond_ring"] = math.random(85, 135),
-    ["rolex"] = math.random(50, 100),
-    ["10kgoldchain"] = math.random(40, 80),
 }
 
 local ItemListHardware = {
-    ["tablet"] = math.random(50, 100),
-    ["iphone"] = math.random(50, 200),
-    ["samsungphone"] = math.random(75, 150),
-    ["laptop"] = math.random(50, 200),
-    ["ps5"] = math.random(300, 600),
-    ["ps2"] = math.random(200, 250),
-    ["xboxx"] = math.random(320, 650),
-    ["gamecube"] = math.random(200, 325),
-    ["actionfigure"] = math.random(400, 600),
-    ["awp"] = math.random(170, 300),
+    ["tablet"] = 400,
+    ["iphone"] = 800,
+    ["samsungphone"] = 500,
+    ["laptop"] = 1200,
+    ["ps5"] = 500,
+    ["ps2"] = 125,
+    ["xboxx"] = 500,
+    ["gamecube"] = 150,
+    ["actionfigure"] = 350,
+    ["awp"] = 2400,
+    ["goldchain"] = 900,
+    ["diamond_ring"] = 1500,
+    ["rolex"] = 400,
+    ["10kgoldchain"] = 200,
+    ["goldbar"] = 5000,
 }
 
 local MeltItems = {
