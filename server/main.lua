@@ -17,6 +17,7 @@ local ItemListHardware = {
     ["rolex"] = 400,
     ["10kgoldchain"] = 200,
     ["goldbar"] = 5000,
+    ["cashroll"] = 200,
 }
 
 local MeltItems = {
