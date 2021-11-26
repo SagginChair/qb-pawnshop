@@ -2,7 +2,7 @@ Config = {}
 
 
 Config.PawnLocation = vector3(-5196.98, -2299.72, 104.89)
-Config.PawnHardwareLocation = vector3(-277.73, 2205.44, 130.41)
+Config.PawnHardwareLocation = vector3(-278.26, 2205.66, 130.2)
 Config.MeltLocation = vector3(-5196.98, -2299.72, 104.89)
 Config.SellGold = vector3(-5196.98, -2299.72, 104.89)
 Config.IsMelting = false

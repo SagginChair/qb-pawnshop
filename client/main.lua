@@ -10,7 +10,7 @@ Citizen.CreateThread(function()
 	SetBlipDisplay(blip, 4)
 	SetBlipScale(blip, 0.55)
 	SetBlipAsShortRange(blip, true)
-	SetBlipColour(blip, 43)
+	SetBlipColour(blip, 75)
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentSubstringPlayerName("")
 	EndTextCommandSetBlipName(blip)
@@ -71,7 +71,7 @@ Citizen.CreateThread(function()
 						DrawText3D(Config.PawnHardwareLocation.x, Config.PawnHardwareLocation.y, Config.PawnHardwareLocation.z, "~g~E~w~ - I'll buy any of your illegal shit ($"..sellHardwarePrice..")")
 						if IsControlJustReleased(0, 38) then
 							TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
-                            QBCore.Functions.Progressbar("sell_pawn_items", "Sell things", math.random(5000, 15000), false, true, {}, {}, {}, {}, function() -- Done
+                            QBCore.Functions.Progressbar("sell_pawn_items", "Selling", math.random(5000, 15000), false, true, {}, {}, {}, {}, function() -- Done
                                 ClearPedTasks(PlayerPedId())
 								TriggerServerEvent("qb-pawnshop:server:sellHardwarePawnItems")
 								sellHardwareItemsSet = false
