@@ -11,6 +11,7 @@ local ItemList = {
 ["glass"] = 7,
 ["stone"] = 2,
 ["rubber"] = 5,
+["electronics"] = 2500,
 }
 
 local ItemListHardware = {
