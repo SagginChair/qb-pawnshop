@@ -2,16 +2,6 @@ local ItemList = {
 ["cashroll"] = 100,
 ["goldbar"] = 3450,
 ["goldcoins"] = 200,
-["metalscrap"] = 9,
-["plastic"] = 7,
-["copper"] = 6,
-["iron"] = 6,
-["aluminum"] = 5,
-["steel"] = 9,
-["glass"] = 7,
-["stone"] = 2,
-["rubber"] = 5,
-["electronics"] = 2500,
 }
 
 local ItemListHardware = {
